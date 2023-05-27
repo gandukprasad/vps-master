@@ -1,5 +1,6 @@
 var express = require("express")
 const compute = require('@google-cloud/compute');
+const cors = require("cors")
 const {InstancesClient} = require('@google-cloud/compute').v1;
 
 const port = process.env.PORT || 3001
@@ -7,11 +8,7 @@ const port = process.env.PORT || 3001
 
 require("dotenv").config();
 var app = express()
-
-
-
-
-
+app.use(cors())
 
 app.get("/mainAPI", (req, res, next) => {
 
