@@ -14,7 +14,7 @@ var app = express()
 app.get("/mainAPI", (req, res, next) => {
 
 
-    
+  console.log("tested")
     const instanceID = '' +req.query.instance;
     const zoneID = ''+req.query.zone
    
@@ -30,7 +30,7 @@ app.get("/mainAPI", (req, res, next) => {
 
     // Run request
     const response = await computeClient.get(request)
-    // console.log(response[0])
+    console.log(response[0])
       res.send(JSON.stringify(
           {data:response}
       ))
