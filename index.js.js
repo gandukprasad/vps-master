@@ -4,6 +4,8 @@ const {InstancesClient} = require('@google-cloud/compute').v1;
 
 const port = process.env.PORT || 3001
 
+
+require("dotenv").config();
 var app = express()
 
 
